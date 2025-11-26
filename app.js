@@ -8,7 +8,9 @@ const cookieParser = require("cookie-parser")
 const axios = require("axios");
 const multer = require('multer');
 const path = require("path");
-const fs = require('fs')
+const fs = require('fs');
+const port = process.env.PORT || 5000;
+
 if (!fs.existsSync("uploads/products")) {
     fs.mkdirSync("uploads/products", {
         recursive: true
@@ -887,4 +889,4 @@ app.get('/subcategories', (req, res) => {
 
 
 
-app.listen(5000, () => console.log('app is listening'))
+app.listen(port, () => console.log('app is listening'))
