@@ -47,10 +47,11 @@ const upload = multer({
 
 
 const db = sql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: process.env.MYSQLHOST, // Railway host
+    user: process.env.MYSQLUSER, // Railway user
+    password: process.env.MYSQLPASSWORD, // Railway password
+    database: process.env.MYSQL_DATABASE, // Railway database name
+    port: 3306
 });
 
 
