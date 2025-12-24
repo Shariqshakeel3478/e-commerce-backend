@@ -51,7 +51,8 @@ const db = sql.createConnection({
     user: process.env.MYSQLUSER, // Railway user
     password: process.env.MYSQLPASSWORD, // Railway password
     database: process.env.MYSQL_DATABASE, // Railway database name
-    port: 3306
+    port: 3306,
+    MySQL_URL: "root:AFOodpUoiYCeGDkBaMaqNNynlrcacYAa@mysql.railway.internal:3306/railway"
 });
 
 
